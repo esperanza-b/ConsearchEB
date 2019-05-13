@@ -27,4 +27,38 @@
 
 
 </body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script>
+  
+  function searchBandsInTown(artist)
+  {
+    //Querying the  nandsintown api for the selected artist,the
+    //?app-id parameter is required, but cqan equal anything
+    var queryURL = "https://rest.bandsintown.com/artists/" +artist +
+                   "?app_id=codindbootcamp";
+
+  $.ajax({
+    url: queryURL,
+    method:"GET"
+  
+  }).done(function(response) {
+    
+    
+    //print the entirre object to the console
+    console.log(response);
+
+    //constructing the html containing the artist information
+
+  })
+
+  }
+  
+  
+  
+  
+  </script>
 </html>
